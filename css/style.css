@@ -1,0 +1,92 @@
+.navbar{
+    margin-top: 10px;
+}
+
+.navbar-nav .nav-item a{
+    color: white;
+}
+
+#logonav img{
+    width: 200px;
+    height: 40px;
+}
+
+#header{
+    background-image: url('udinusSemarang.jpg');
+    background-size: 1349px 570px;
+    width: 1349px;
+    height: 570px;
+    /* 719px */
+    margin-left: 0px;
+}
+
+#header a .btn{
+    /* margin-top: 400px; */
+    margin-top: 450px;
+    margin-left: 50%;
+}
+
+#judsis{
+    margin-top: 20px;
+}
+
+#laptop img{
+    width: 518px;
+    height: 384px;
+}
+
+#hape img{
+    width: 518px;
+    height: 384px;
+}
+
+#alur img{
+    width: 1103px;
+    height: 313px;
+}
+
+#foot{
+    background-image: url('udinus2.jpg');
+}
+
+#logodinus img{
+    width: 100px;
+    height: 100px;
+}
+
+#foter2 div{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#desfot p{
+    color: white;
+    font-size: 11px;
+}
+
+#desfot{
+    color: white;
+    margin-left: 20px;
+}
+
+#foot1{
+    margin-bottom: 0px;
+}
+
+#foot2{
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+#foot3{
+    margin-top: 0px;
+}
+
+#kontakfot img{
+    width: 50px;
+    height: 50px;
+}
+
+#kontakfot{
+    color: white;
+}
