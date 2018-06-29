@@ -10,7 +10,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <title>Booking Ruang</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('css/style.css'); ?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('css/style.css') ?>">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -18,7 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </head>
 <body>
     <nav class="container navbar navbar-expand-sm bg-transparent fixed-top">
-        <a class="navbar-brand" id="logonav" href="#"><img src="<?php echo base_url('asset/logo.png'); ?>"></a>
+        <a class="navbar-brand" id="logonav" href="#"><img src="<?php echo base_url('asset/logo.png')?>"></a>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <a class="nav-link" href="#">Beranda</a>
@@ -30,7 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <a class="nav-link" href="#">Alur</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
+                <a class="nav-link" href="<?php echo base_url().'index.php/login'?>">Login</a>
             </li>
         </ul>
     </nav>
