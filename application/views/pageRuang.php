@@ -15,11 +15,12 @@
 <body>
     <nav class="navOrma">
         <div class="nav-wrapper container">
-        <a href="#" class="brand-logo logonav"><img src="<?php echo base_url('asset/logo.png'); ?>"></a>
+        <a href="<?php echo site_url('welcome/beranda')?>" class="brand-logo logonav"><img src="<?php echo base_url('asset/logo.png'); ?>"></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="collapsible.html">Beranda</a></li>
-            <li><a href="collapsible.html">Input Peminjaman</a></li>
-            <li><a href="collapsible.html">Logout</a></li>
+            <li><a href="<?php echo site_url('welcome/beranda')?>">Beranda</a></li>
+            <li><a href="<?php echo site_url('welcome/orma');?>">Input Peminjaman</a></li>
+            <li> <?php echo $this->session->userdata("nim")?></li>
+            <li><a href="<?php echo site_url('welcome/logout');?>">Logout</a></li>
         </ul>
         </div>
     </nav>

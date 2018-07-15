@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Halaman Login</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('css/pageLogin.css'); ?>">
@@ -23,11 +23,11 @@
                     <div id="login">
                         <div class="row">
                             <div class="col s12">
-                                <?php echo form_open('')?>
+                                <?php echo form_open('welcome/ceklogin')?>
                                 <div class="row">
                                     <div class="input-field col s12">
                                         <label for="username">NIM*</label>
-                                        <input type="text" name="username" class="validate" required>
+                                        <input type="text" name="nim" class="validate" required>
                                     </div>
                                 </div>
                                 <div class="row">
