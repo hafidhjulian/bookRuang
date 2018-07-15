@@ -22,4 +22,16 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('portal');
 	}
+	public function login(){
+		$this->load->view('pageLogin');
+	}
+	public function orma(){
+		$this->load->view('pageOrmawa');
+	}
+	public function ruang(){
+		$this->load->view('pageRuang');
+	}
+	public function beranda(){
+		$this->load->view('pageBeranda');
+	}
 }

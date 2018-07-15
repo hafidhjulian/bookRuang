@@ -17,29 +17,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <nav class="container navbar navbar-expand-sm bg-transparent fixed-top">
+    <nav class="container-fluid navbar navbar-expand-sm fixed-top">
+        <div class="container">
         <a class="navbar-brand" id="logonav" href="#"><img src="<?php echo base_url('asset/logo.png'); ?>"></a>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#">Beranda</a>
+                <a class="nav-link" href="<?php echo site_url('welcome/beranda'); ?>">Beranda</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Informasi</a>
+                <a class="nav-link" href="#judsis">Informasi</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Alur</a>
+                <a class="nav-link" href="#alur">Alur</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
+                <a class="nav-link" href="<?php echo site_url('welcome/login'); ?>">Login</a>
             </li>
         </ul>
+        </div>
     </nav>
     <div id="header" class="container-fluid">
         <a href="#">
             <button type="button" class="btn btn-light">Pesan</button>
         </a>
     </div>
-    <div class="container">
+    <div class="container" id="sistemjud">
         <div class="row" id="judsis">
             <div class="col-sm-12 text-center">
                 <h1>Sistem Peminjaman Ruang</h1>
@@ -84,7 +86,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <img src="<?php echo base_url('asset/table1.png');?>">
             </div>
         </div>
-        <div class="row">
+        <div class="row" id="alur">
             <div class="col-sm-12 text-center">
                 <h1>Alur Pemesanan Ruang</h1>
             </div>
@@ -124,3 +126,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </div>
 </body>
 </html>
+
+<script>
+	$(document).ready(function(){       
+	 var scroll_start = 0;
+   var startchange = $('#sistemjud');
+    var offset = startchange.offset();
+     if (startchange.length){
+    $(document).scroll(function() { 
+       scroll_start = $(this).scrollTop();
+       if(scroll_start > offset.top) {
+           $(".navbar").css('background-color', '#030629');
+           $(".navbar img").attr('src','<?php echo base_url('asset/logo2.png'); ?>')
+        } else {
+           $('.navbar').css('background', 'transparent');
+           $(".navbar img").attr('src','<?php echo base_url('asset/logo.png'); ?>')
+        }
+    });
+     }
+ });
+ 
+</script>
