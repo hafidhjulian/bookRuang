@@ -17,12 +17,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <nav class="container-fluid navbar navbar-expand-sm fixed-top">
+    <nav class="container-fluid navbar navbar-expand-sm fixed-top" id="primary-nav">
         <div class="container">
         <a class="navbar-brand" id="logonav" href="#"><img src="<?php echo base_url('asset/logo.png'); ?>"></a>
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo site_url('welcome/beranda'); ?>">Beranda</a>
+                <a class="nav-link" href="#header">Beranda</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#judsis">Informasi</a>
@@ -37,9 +37,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
     </nav>
     <div id="header" class="container-fluid">
-        <a href="#">
-            <button type="button" class="btn btn-light">Pesan</button>
-        </a>
+        
     </div>
     <div class="container" id="sistemjud">
         <div class="row" id="judsis">
@@ -53,8 +51,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="col-sm-6">
                 <h5>Peminjaman Ruang Kelas</h5>
                 <hr>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, ut explicabo eveniet non molestias saepe placeat autem nisi, 
-                    iste ab necessitatibus itaque natus dolorem alias perferendis, soluta vitae labore inventore.</p>
+                <p>Dengan padatnya kegiatan dosen dan mahasiswa. UDINUS menyediakan peminjaman ruang kelas melalui website Sistem Peminjaman Ruang agar
+                    mahasiswa dan dosen dapat mencari dan meminjam ruang kelas untuk mata kuliah pengganti lebih mudah.
+                </p>
             </div>
             <div class="col-sm-6" id="laptop">
                 <img src="<?php echo base_url('asset/laptop.png');?>">
@@ -69,18 +68,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <h5>Peminjaman Aula</h5>
                 <hr>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Mollitia ut architecto quos assumenda debitis nesciunt qui neque perspiciatis praesentium reprehenderit in nam accusamus consectetur cupiditate dolore esse ad, 
-                    consequuntur hic!
+                    UKM dan Organisasi Mahasiswa membutuhkan Aula untuk mengadakan rencana kegiatan mereka. UDINUS juga menyediakan peminjaman untuk Aula di Gedung H.
                 </p>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-6">
-                <h5>Peminjaman Galery & Ruang Rapat</h5>
+                <h5>Peminjaman Gallery & Ruang Rapat</h5>
                 <hr>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, ut explicabo eveniet non molestias saepe placeat autem nisi, 
-                    iste ab necessitatibus itaque natus dolorem alias perferendis, soluta vitae labore inventore.</p>
+                <p>Peminjaman Gallery dan Ruang Rapat kini lebih mudah bagi UKM dan Organisasi Mahasiswa. Karena Sistem Peminjaman Ruang juga menyediakan peminjaman untuk Gallery dan Ruang Rapat.
+
+                </p>
             </div>
             <div class="col-sm-6" id="laptop">
                 <img src="<?php echo base_url('asset/table1.png');?>">
@@ -146,4 +144,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
      }
  });
  
+ // add class to body for scroll spy to work
+$("body").attr("data-spy", "scroll").attr("data-target", "#primary-nav")
+// Activate srollspy
+$("main").scrollspy({ target: "#primary-nav" })
+
+// Smooth Scrolling for internal links
+$('a[href^="#"]').on("click",function (e) {
+	    e.preventDefault();
+
+	    var target = this.hash;
+	    var $target = $(target);
+
+	    $("html, body").stop().animate({
+	        "scrollTop": $target.offset().top
+	    }, 900, 'swing', function () {
+	        window.location.hash = target;
+	    });
+	});
 </script>

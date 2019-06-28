@@ -11,3 +11,14 @@
     width: 434px;
     height: 482px;
 }
+
+body .bg{
+    opacity: 0.4;
+    position: absolute;
+    display: flex;
+    z-index: -999;
+}
+
+.tabs .tab a {
+    color:white;
+}
